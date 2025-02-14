@@ -46,15 +46,16 @@ export default function CB() {
           {teams.map((team, index) => (
             <BackgroundGradient
               key={index}
-              className={`rounded-[22px] p-6 sm:p-10 bg-white dark:bg-zinc-900 ${team.order}`}
+              className={`rounded-[22px] p-6 sm:p-10 bg-white dark:bg-zinc-900 ${team.order} w-full h-full min-h-[320px] flex flex-col items-center justify-center`}
             >
-              <Image
-                src={team.logo || "/placeholder.svg"}
-                alt={team.name}
-                width={150}
-                height={150}
-                className="mx-auto mb-4 rounded-full"
-              />
+              <div className="w-32 h-32 relative mb-4">
+                <Image
+                  src={team.logo || "/placeholder.svg"}
+                  alt={team.name}
+                  fill
+                  className="rounded-full object-cover"
+                />
+              </div>
               <TextGenerateEffect
                 words={team.name}
                 className="text-center text-lg font-bold"
