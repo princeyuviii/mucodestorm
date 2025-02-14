@@ -4,11 +4,36 @@ import Image from "next/image";
 
 export default function CB() {
   const teams = [
-    { name: "Sudip Bhalwankar", logo: "/sudip.png", order: "order-5" },
-    { name: "Harshvardhan Singh", logo: "/harsh.jpg", order: "order-3" },
-    { name: "Aditya Joshi", logo: "/aditya.jpg", order: "order-1" }, // First on mobile
-    { name: "Jigyasa Joshi", logo: "/jigyasa.png", order: "order-4" },
-    { name: "Shashank Gupta", logo: "/gupta.jpg", order: "order-2" }, // Second on mobile
+    { 
+      name: "Aditya Joshi", 
+      logo: "/aditya.jpg", 
+      position: "Technical Committee Core", 
+      order: "order-1" 
+    },
+    { 
+      name: "Shashank Gupta", 
+      logo: "/gupta.jpg", 
+      position: "Sports Committee Core", 
+      order: "order-2" 
+    },
+    { 
+      name: "Harshvardhan Singh", 
+      logo: "/harsh.jpg", 
+      position: "Marketing Committee Core", 
+      order: "order-3" 
+    },
+    { 
+      name: "Jigyasa Joshi", 
+      logo: "/jigyasa.png", 
+      position: "Training & Placement Committee Core", 
+      order: "order-4" 
+    },
+    { 
+      name: "Sudip Bhalwankar", 
+      logo: "/sudip.png", 
+      position: "Cultural Committee Core", 
+      order: "order-5" 
+    },
   ];
 
   return (
@@ -21,19 +46,22 @@ export default function CB() {
           {teams.map((team, index) => (
             <BackgroundGradient
               key={index}
-              className={`rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900 ${team.order}`}
+              className={`rounded-[22px] p-6 sm:p-10 bg-white dark:bg-zinc-900 ${team.order}`}
             >
               <Image
                 src={team.logo || "/placeholder.svg"}
                 alt={team.name}
                 width={150}
                 height={150}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full"
               />
               <TextGenerateEffect
                 words={team.name}
                 className="text-center text-lg font-bold"
               />
+              <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+                {team.position}
+              </p>
             </BackgroundGradient>
           ))}
         </div>
