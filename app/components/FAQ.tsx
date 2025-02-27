@@ -3,26 +3,34 @@ import { AccordionDemo } from "./ui/accordion"
 export default function FAQ() {
   const faqs = [
     {
-      question: "How to Register for MU CodeStorm?",
-      answer: (
-        <>
-          <p>Follow these steps to register:</p>
-          <ol className="list-decimal pl-5">
-            <span>1. Click </span>
-            <a className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text" href="#reg">"Register Now" </a>
-            <span> Start your registration.</span><br>
-            <span>2. Fill Out the Form – Enter your details and team info.</span><br>
-            <span>3. Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</span>
-          </ol>
-          <p><strong>Note:</strong></p>
-          <ul className="list-disc pl-5">
-            <li>The problem statement is required but won't be graded or used for elimination.</li>
-            <li>The official hackathon problem statement will be provided on the event day.</li>
-            <li>Your submission helps organizers understand key themes for the event.</li>
-          </ul>
-        </>
-      ),
-    },
+  question: "How to Register for MU CodeStorm?",
+  answer: (
+    <>
+      <p>Follow these steps to register:</p>
+      <ol className="list-decimal pl-5">
+        <li>
+          <span>1. Click </span>
+          <a
+            className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text"
+            href="#reg"
+          >
+            "Register Now"
+          </a>
+          <span> Start your registration.</span>
+        </li>
+        <li>2. Fill Out the Form – Enter your details and team info.</li>
+        <li>3. Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</li>
+      </ol>
+      <p><strong>Note:</strong></p>
+      <ul className="list-disc pl-5">
+        <li>The problem statement is required but won't be graded or used for elimination.</li>
+        <li>The official hackathon problem statement will be provided on the event day.</li>
+        <li>Your submission helps organizers understand key themes for the event.</li>
+      </ul>
+    </>
+  ),
+}
+
     {
       question: "Who can participate?",
       answer: "MU CodeStorm is open to all students currently enrolled in any recognized educational institution.",
