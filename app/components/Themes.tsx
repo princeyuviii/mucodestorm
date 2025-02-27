@@ -6,7 +6,7 @@ export default function Themes() {
     {
       title: "AI/ML/DL",
       description: "Explore the cutting-edge world of AI, Machine Learning, and Deep Learning to innovate and solve real-world challenges.",
-      pdfUrl: "/path/to/ai-ml-dl.pdf", // Add the path to the PDF for this theme
+      pdfUrl: "/aiml.pdf", // Add the path to the PDF for this theme
     },
     {
       title: "Open Innovation",
