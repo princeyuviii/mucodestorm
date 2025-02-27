@@ -1,4 +1,4 @@
-import { HoverEffect } from "./ui/card-hover-effect";
+import { HoverEffect } from "./ui/card-hover-effect"; // Keep the HoverEffect import
 
 export default function Themes() {
   const themes = [
@@ -46,9 +46,9 @@ export default function Themes() {
               key={index}
               href={theme.pdfUrl} 
               download // This triggers the download
-              className="block bg-white p-6 rounded-lg shadow-lg hover:bg-gray-100 cursor-pointer"
+              className="block bg-transparent p-6 rounded-lg shadow-lg hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600 hover:text-white transition-all cursor-pointer"
             >
-              <h3 className="text-xl font-semibold">{theme.title}</h3>
+              <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">{theme.title}</h3>
               <p className="text-gray-600">{theme.description}</p>
             </a>
           ))}
