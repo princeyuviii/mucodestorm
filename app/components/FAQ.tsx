@@ -29,7 +29,7 @@ export default function FAQ() {
       </ul>
     </>
   ),
-}
+},
 
     {
       question: "Who can participate?",
