@@ -20,7 +20,7 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 relative z-10">
         
-        <div div="reg" className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div id="reg" className="h-[10rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h1 className="text-5xl md:text-7xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-sky-500">
         MU CodeStorm
       </h1>
