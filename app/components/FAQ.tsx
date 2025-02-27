@@ -9,7 +9,7 @@ export default function FAQ() {
       <p>Follow these steps to register:</p>
       <ol className="list-decimal pl-5">
         <li>
-          <span>1. Click </span>
+          <span> Click </span>
           <a
             className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text"
             href="#reg"
@@ -18,8 +18,8 @@ export default function FAQ() {
           </a>
           <span> Start your registration.</span>
         </li>
-        <li>2. Fill Out the Form – Enter your details and team info.</li>
-        <li>3. Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</li>
+        <li> Fill Out the Form – Enter your details and team info.</li>
+        <li> Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</li>
       </ol>
       <p><strong>Note:</strong></p>
       <ul className="list-disc pl-5">
