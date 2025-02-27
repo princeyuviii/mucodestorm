@@ -7,7 +7,7 @@ export default function Teams() {
     { name: "Palak Sharma", logo: "/palak.png" },
     { name: "Yuvraj Singh Rathore", logo: "/yuvi.png" },
     { name: "Mradul Maheshwari", logo: "/mradul.png" },
-    { name: "Kavy Porwal", logo: "/kavy.jpeg" },
+    { name: "Kavy Porwal", logo: "/k.jpeg" },
   ];
 
   return (
