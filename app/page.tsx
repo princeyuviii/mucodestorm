@@ -20,6 +20,9 @@ const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 
 export default function Home() {
   return (
+    <Head>
+        <link rel="icon" href="/logo.png" />
+    </Head>
     <div className="min-h-screen bg-black text-white relative">
       <AnimatedCursor
         innerSize={8}
