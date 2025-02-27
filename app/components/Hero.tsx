@@ -24,6 +24,9 @@ export default function Hero() {
       <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-sky-500">
         MU CodeStorm
       </h1>
+      <h1 className="text-3xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-sky-500">
+        A National Level Hackathon
+      </h1>
       <div className="w-[40rem] h-10 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
