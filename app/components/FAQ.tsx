@@ -3,6 +3,26 @@ import { AccordionDemo } from "./ui/accordion"
 export default function FAQ() {
   const faqs = [
     {
+      question: "How to Register for MU CodeStorm?",
+      answer: (
+        <>
+          <p>Follow these steps to register:</p>
+          <ol className="list-decimal pl-5">
+            <li>Visit the Website – Go to Chancellor Brigade and navigate to MUFest.com.</li>
+            <li>Click "Register Now" – Start your registration.</li>
+            <li>Fill Out the Form – Enter your details and team info.</li>
+            <li>Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</li>
+          </ol>
+          <p><strong>Note:</strong></p>
+          <ul className="list-disc pl-5">
+            <li>The problem statement is required but won't be graded or used for elimination.</li>
+            <li>The official hackathon problem statement will be provided on the event day.</li>
+            <li>Your submission helps organizers understand key themes for the event.</li>
+          </ul>
+        </>
+      ),
+    },
+    {
       question: "Who can participate?",
       answer: "MU CodeStorm is open to all students currently enrolled in any recognized educational institution.",
     },
@@ -16,12 +36,11 @@ export default function FAQ() {
     },
     {
       question: "What's included in the registration fee?",
-      answer: "We will be providing accommodation and meals for participants, ensuring a hassle-free experience! And full access to the Spandan 2K25 Event. for more information about Spandan 2k25 visit https://meu.edu.in/chancellor-brigade/",
+      answer: "We will be providing accommodation and meals for participants, ensuring a hassle-free experience! And full access to the Spandan 2K25 Event. For more information about Spandan 2k25, visit [Spandan 2K25](https://meu.edu.in/chancellor-brigade/).",
     },
     {
       question: "What should I bring?",
-      answer:
-        "Bring your laptop, charger, and any other devices you might need. Don't forget your student ID and any necessary documentation.",
+      answer: "Bring your laptop, charger, and any other devices you might need. Don't forget your student ID and any necessary documentation.",
     },
     {
       question: "Are there any hardware limitations?",
