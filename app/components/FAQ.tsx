@@ -8,8 +8,9 @@ export default function FAQ() {
         <>
           <p>Follow these steps to register:</p>
           <ol className="list-decimal pl-5">
-            <li>Visit the Website – Go to Chancellor Brigade and navigate to MUFest.com.</li>
-            <li>Click "Register Now" – Start your registration.</li>
+            <li>Click </li>
+            <a href="#register">"Register Now"</a>
+            <span> Start your registration.</span>
             <li>Fill Out the Form – Enter your details and team info.</li>
             <li>Submit a Problem Statement – Upload a PDF or PPT showcasing any idea from any domain.</li>
           </ol>
