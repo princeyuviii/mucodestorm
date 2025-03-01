@@ -1,4 +1,5 @@
-import { StickyScroll } from "./ui/sticky-scroll-reveal"
+import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { useEffect } from "react";
 
 export default function About() {
   const content = [
@@ -22,17 +23,63 @@ export default function About() {
       description:
         "Form a team of 3-4 members, choose a problem statement from our themes, and start coding! You'll have 36 hours to create a working prototype and pitch your solution to our panel of judges.",
     },
-  ]
+  ];
+
+  // Add custom scrollbar styling when component mounts
+  useEffect(() => {
+    // Create a style element
+    const styleEl = document.createElement("style");
+    
+    // Define the CSS for custom scrollbar
+    const css = `
+      /* For Webkit browsers (Chrome, Safari, newer Edge) */
+      .sticky-scroll-container ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      
+      .sticky-scroll-container ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      .sticky-scroll-container ::-webkit-scrollbar-thumb {
+        background: rgba(139, 92, 246, 0.3); /* Purple with transparency */
+        border-radius: 8px;
+      }
+      
+      .sticky-scroll-container ::-webkit-scrollbar-thumb:hover {
+        background: rgba(139, 92, 246, 0.5); /* Darker purple on hover */
+      }
+      
+      /* For Firefox */
+      .sticky-scroll-container * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+      }
+    `;
+    
+    // Set the CSS text content
+    styleEl.textContent = css;
+    
+    // Append the style element to the document head
+    document.head.appendChild(styleEl);
+    
+    // Clean up function to remove the style element when component unmounts
+    return () => {
+      document.head.removeChild(styleEl);
+    };
+  }, []);
 
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
           About CodeStorm
         </h2>
-        <StickyScroll content={content} />
+        <div className="sticky-scroll-container">
+          <StickyScroll content={content} />
+        </div>
       </div>
     </section>
-  )
+  );
 }
-
