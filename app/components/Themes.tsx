@@ -1,6 +1,5 @@
 import { HoverEffect } from "./ui/card-hover-effect";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { useEffect, useRef } from "react";
 
 export default function Themes() {
   const themes = [
@@ -36,26 +35,22 @@ export default function Themes() {
     },
   ];
 
-  // Create a ref for invisible download links
-  const downloadRefs = useRef([]);
-
-  // Initialize refs array based on themes length
-  useEffect(() => {
-    downloadRefs.current = downloadRefs.current.slice(0, themes.length);
-  }, [themes.length]);
-
-  // Create a copy of themes with a click handler
-  const themesWithHandlers = themes.map((theme, index) => ({
-    title: theme.title,
-    description: theme.description,
-    onClick: () => {
-      // Trigger the hidden download link
-      if (downloadRefs.current[index]) {
-        downloadRefs.current[index].click();
-      }
-    }
+  // Just use the title and description
+  const themeDisplay = themes.map(({ title, description }) => ({
+    title,
+    description,
   }));
-  
+
+  // Handle the download functionality
+  const handleDownload = (index) => {
+    const link = document.createElement('a');
+    link.href = themes[index].pdfUrl;
+    link.download = themes[index].title + '.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="themes" className="py-20">
       <div className="container mx-auto px-4 text-center">
@@ -63,25 +58,23 @@ export default function Themes() {
           CodeStorm Themes
         </h2>
         
-        {/* Hidden download links */}
-        <div className="hidden">
-          {themes.map((theme, index) => (
-            <a 
-              key={index}
-              ref={el => downloadRefs.current[index] = el}
-              href={theme.pdfUrl}
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {theme.title}
-            </a>
-          ))}
-        </div>
-        
-        {/* Use HoverEffect with click handlers */}
-        <div className="cursor-pointer">
-          <HoverEffect items={themesWithHandlers} />
+        <div 
+          className="cursor-pointer" 
+          onClick={(e) => {
+            // Find the closest theme card
+            const themeCard = e.target.closest('.grid > div');
+            if (!themeCard) return;
+            
+            // Get the index of the clicked card
+            const cards = Array.from(document.querySelectorAll('.grid > div'));
+            const index = cards.indexOf(themeCard);
+            
+            if (index !== -1) {
+              handleDownload(index);
+            }
+          }}
+        >
+          <HoverEffect items={themeDisplay} />
         </div>
       </div>
     </section>
