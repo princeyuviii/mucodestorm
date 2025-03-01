@@ -1,13 +1,13 @@
 import { HoverEffect } from "./ui/card-hover-effect";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Themes() {
   const themes = [
     {
       title: "AI/ML/DL",
       description: "Explore the cutting-edge world of AI, Machine Learning, and Deep Learning to innovate and solve real-world challenges.",
-      pdfUrl: "/pdfs/ai-ml-dl.pdf"
+      pdfUrl: "/pdfs/ai-ml-dl.pdf" 
     },
     {
       title: "Open Innovation",
@@ -36,15 +36,24 @@ export default function Themes() {
     },
   ];
 
-  // State to store the clicked PDF URL
-  const [selectedPdf, setSelectedPdf] = useState(null);
+  // Create a ref for invisible download links
+  const downloadRefs = useRef([]);
 
-  // Create a modified version of themes without the pdfUrl for HoverEffect
-  const themesForDisplay = themes.map((theme, index) => ({
+  // Initialize refs array based on themes length
+  useEffect(() => {
+    downloadRefs.current = downloadRefs.current.slice(0, themes.length);
+  }, [themes.length]);
+
+  // Create a copy of themes with a click handler
+  const themesWithHandlers = themes.map((theme, index) => ({
     title: theme.title,
     description: theme.description,
-    // Add an onClick handler by using data attributes
-    "data-index": index,
+    onClick: () => {
+      // Trigger the hidden download link
+      if (downloadRefs.current[index]) {
+        downloadRefs.current[index].click();
+      }
+    }
   }));
   
   return (
@@ -54,20 +63,26 @@ export default function Themes() {
           CodeStorm Themes
         </h2>
         
-        {/* Wrapper div that catches clicks and determines which theme was clicked */}
-        <div 
-          onClick={(e) => {
-            const index = e.target.closest('[data-index]')?.getAttribute('data-index');
-            if (index !== undefined && index !== null) {
-              // Open the PDF in a new tab
-              window.open(themes[index].pdfUrl, '_blank');
-            }
-          }}
-          className="cursor-pointer"
-        >
-          <HoverEffect items={themesForDisplay} />
+        {/* Hidden download links */}
+        <div className="hidden">
+          {themes.map((theme, index) => (
+            <a 
+              key={index}
+              ref={el => downloadRefs.current[index] = el}
+              href={theme.pdfUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {theme.title}
+            </a>
+          ))}
         </div>
         
+        {/* Use HoverEffect with click handlers */}
+        <div className="cursor-pointer">
+          <HoverEffect items={themesWithHandlers} />
+        </div>
       </div>
     </section>
   );
