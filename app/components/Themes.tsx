@@ -53,7 +53,7 @@ export default function Themes() {
             {themes.map((theme, index) => (
               <div 
                 key={index} 
-                className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-transparent backdrop-blur-sm"
               >
                 <h4 className="text-xl font-bold mb-3">{theme.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 mb-5 text-sm">{theme.description}</p>
