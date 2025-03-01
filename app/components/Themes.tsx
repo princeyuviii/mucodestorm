@@ -56,7 +56,7 @@ export default function Themes() {
                 key={index} 
                 className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-transparent backdrop-blur-sm"
               >
-                <h4 className="text-xl font-bold mb-3">{theme.title}</h4>
+                <h4 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">{theme.title}</h4>
                 <p className="text-white mb-5 text-sm">{theme.description}</p>
                 <a
                   href={theme.downloadUrl} download
