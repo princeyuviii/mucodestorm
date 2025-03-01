@@ -8,32 +8,32 @@ export default function Themes() {
     {
       title: "AI/ML/DL",
       description: "Explore the cutting-edge world of AI, Machine Learning, and Deep Learning to innovate and solve real-world challenges.",
-      downloadUrl: "/problem-statements/ai-ml-dl.pdf",
+      downloadUrl: "/aiml.pdf",
     },
     {
       title: "Open Innovation",
       description: "Unleash the power of open innovation to transform healthcare, finance, edtech, and more with collaborative, cutting-edge solutions.",
-      downloadUrl: "/problem-statements/open-innovation.pdf",
+      downloadUrl: "/open.pdf",
     },
     {
       title: "Cyber Security",
       description: "Empower the future of digital safety by innovating and collaborating on cutting-edge cybersecurity solutions to protect against evolving threats.",
-      downloadUrl: "/problem-statements/cyber-security.pdf",
+      downloadUrl: "/cyber.pdf",
     },
     {
       title: "Blockchain",
       description: "Revolutionize industries with decentralized solutions and transparent technologies through the power of blockchain innovation.",
-      downloadUrl: "/problem-statements/blockchain.pdf",
+      downloadUrl: "/bct.pdf",
     },
     {
       title: "Development",
       description: "Build innovative, scalable, and user-centric web and mobile applications that redefine digital experiences.",
-      downloadUrl: "/problem-statements/development.pdf",
+      downloadUrl: "/appweb.pdf",
     },
     {
       title: "IoT",
       description: "Connect the world seamlessly with smart, intuitive solutions through the power of the Internet of Things (IoT).",
-      downloadUrl: "/problem-statements/iot.pdf",
+      downloadUrl: "/iot.pdf",
     },
   ];
 
