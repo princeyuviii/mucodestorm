@@ -1,6 +1,7 @@
 import { HoverEffect } from "./ui/card-hover-effect";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { Download } from "lucide-react";
+import { Button } from "./ui/moving-border";
 
 export default function Themes() {
   const themes = [
@@ -57,13 +58,16 @@ export default function Themes() {
               >
                 <h4 className="text-xl font-bold mb-3">{theme.title}</h4>
                 <p className="text-gray-600 dark:text-gray-300 mb-5 text-sm">{theme.description}</p>
-                <a 
-                  href={theme.downloadUrl} 
-                  className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-                  download
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Problem Statement
+                <a href={theme.downloadUrl} download>
+                  <Button
+                    borderRadius="1.75rem"
+                    className="bg-slate-950 text-white border-neutral-200 dark:border-slate-800"
+                  >
+                    <div className="flex items-center justify-center">
+                      <Download className="w-4 h-4 mr-2" />
+                      Download Problem Statement
+                    </div>
+                  </Button>
                 </a>
               </div>
             ))}
