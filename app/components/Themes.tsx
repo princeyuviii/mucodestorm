@@ -40,10 +40,10 @@ export default function Themes() {
   return (
     <section id="themes" className="py-20">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
+{/*         <h2 className="text-4xl font-extrabold mb-12 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
           CodeStorm Themes
         </h2>
-        <HoverEffect items={themes} />
+        <HoverEffect items={themes} /> */}
         
         {/* Problem Statements Download Section */}
         <div className="mt-20">
@@ -57,7 +57,7 @@ export default function Themes() {
                 className="rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-transparent backdrop-blur-sm"
               >
                 <h4 className="text-xl font-bold mb-3">{theme.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300 mb-5 text-sm">{theme.description}</p>
+                <p className="text-white mb-5 text-sm">{theme.description}</p>
                 <a href={theme.downloadUrl} download>
                   <Button
                     borderRadius="1.75rem"
