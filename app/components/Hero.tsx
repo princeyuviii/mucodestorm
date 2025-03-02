@@ -6,16 +6,7 @@ export default function Hero() {
   return (
     <section className="text-center relative flex flex-col justify-center min-h-screen pt-16">
       <div className="absolute inset-0 w-full h-full">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={40}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-          speed={0.05}
-        />
+        
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

@@ -10,7 +10,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-black text-white py-12 border-t border-gray-800 z-50 relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo Section */}
@@ -108,6 +108,9 @@ export default function Footer() {
           <LinkPreview url="https://github.com/iamkavy47" className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
             Kavy Porwal
           </LinkPreview>{" "}
+            <LinkPreview url="https://github.com/tanveer188" className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text hover:underline">
+            <span className=" text-gray-400">and</span> Tanveer Hussain
+            </LinkPreview>{" "}
         </div>
       </div>
     </footer>

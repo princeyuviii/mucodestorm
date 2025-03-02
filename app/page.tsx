@@ -140,18 +140,18 @@ export default function Home() {
           outerStyle={{ border: "3px solid #fff" }}
         />
       )}
-      {/* Sparkles moved outside to prevent blocking interactions */}
-      <SparklesCore
-        id="tsparticlesfullpage"
-        background="transparent"
-        minSize={0.6}
-        maxSize={1.4}
-        particleDensity={40}
-        className="absolute inset-0 w-full h-full pointer-events-none" 
-        particleColor="#FFFFFF"
-        speed={0.2}
-      />
-      <Header />
+        <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            particleColor="#FFFFFF"
+            speed={1}
+          />
+        </div>
+        <Header />
       <main className="relative z-10">
         <Hero />
         <ScrollAnimation>

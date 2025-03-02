@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable}`}>
+      <head>
+        <link rel="icon" href="/mu.ico" />
+      </head>
       <body className="font-sans bg-black text-white">
         {children}
         <Analytics />
