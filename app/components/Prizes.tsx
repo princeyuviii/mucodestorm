@@ -17,9 +17,9 @@ export default function Prizes() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {prizes.map((prize, index) => (
             <CardSpotlight key={index} className="h-96 w-full flex flex-col items-center justify-center p-6 rounded-2xl">
-              <div className="text-6xl mb-4">{prize.icon}</div>
-              <h3 className="text-2xl font-bold mb-2 text-white">{prize.place}</h3>
-              <h3 className="text-2xl font-bold mb-2 text-white">{prize.amount}</h3>
+              <div className="text-6xl mb-4 z-10">{prize.icon}</div>
+              <h3 className="text-2xl font-bold mb-2 text-white z-10">{prize.place}</h3>
+              <h3 className="text-2xl font-bold mb-2 text-white z-10">{prize.amount}</h3>
             </CardSpotlight>
           ))}
         </div>
