@@ -10,10 +10,6 @@ export default function Teams() {
     { name: "Kavy Porwal", logo: "/k.jpeg", role: "Organizer" },
   ];
 
-  const blobColors = [
-    "#FFFFFF"
-  ];
-
   return (
     <section id="teams" className="py-20">
       <div className="container mx-auto px-4 text-center">
@@ -33,7 +29,6 @@ export default function Teams() {
               key={index}
               team={team}
               index={index}
-              blobColor={blobColors[index % blobColors.length]}
             />
           ))}
         </div>
@@ -42,7 +37,7 @@ export default function Teams() {
   );
 }
 
-function TeamCard({ team, index, blobColor }: { team: { name: string, logo: string, role: string }, index: number, blobColor: string }) {
+function TeamCard({ team, index }: { team: { name: string, logo: string, role: string }, index: number }) {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
@@ -54,45 +49,29 @@ function TeamCard({ team, index, blobColor }: { team: { name: string, logo: stri
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="relative w-[250px] h-[320px] rounded-[14px] overflow-hidden group">
-        {/* Animated border */}
+      <div className="relative w-full max-w-[250px] h-[320px] rounded-xl overflow-hidden group">
+        {/* Clean border with subtle animation */}
         <motion.div 
-          className="absolute inset-0 bg-white rounded-[14px]"
+          className="absolute inset-0 rounded-xl bg-gray-900"
           animate={{
             boxShadow: isHovered 
-              ? "0 0 25px rgba(139, 92, 246, 0.9)" 
-              : "0 0 15px rgba(79, 70, 229, 0.5)",
-            backgroundPosition: isHovered ? "100% 50%" : "0% 50%",
-            opacity: isHovered ? 1 : 0.7,
+              ? "0 0 20px rgba(79, 70, 229, 0.4)" 
+              : "0 0 10px rgba(30, 30, 30, 0.4)",
           }}
-          transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
-          style={{ backgroundSize: "200% 200%" }}
+          style={{
+            border: isHovered ? "1px solid rgba(99, 102, 241, 0.4)" : "1px solid rgba(75, 85, 99, 0.2)",
+          }}
+          transition={{ duration: 0.3 }}
         />
         
         <motion.div 
-          className="relative w-[250px] h-[320px] rounded-[14px] z-10 overflow-hidden flex flex-col items-center justify-center shadow-[20px_20px_60px_#1a1a1a,_-20px_-20px_60px_#2c2c2c]"
+          className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center"
           whileHover={{ scale: 0.98 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.div 
-            className="absolute z-[1] top-[50%] left-[50%] rounded-[50%] opacity-100 blur-[12px]" 
-            style={{ backgroundColor: blobColor }}
-            animate={{
-              x: ["-100%", "0%", "0%", "-100%", "-100%"],
-              y: ["-100%", "-100%", "0%", "0%", "-100%"],
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            initial={{ width: 200, height: 200 }}
-            whileHover={{ width: 250, height: 250, filter: "blur(18px)" }}
-          />
-          
-          <div className="absolute top-[5px] left-[5px] w-[calc(100%-10px)] h-[calc(100%-10px)] z-[2] bg-[rgba(20,20,20,0.95)] backdrop-blur-[24px] rounded-[10px] overflow-hidden outline-[2px] outline outline-gray-800 group-hover:outline-blue-500 flex flex-col items-center justify-center p-4 transition-all duration-300">
+          <div className="absolute top-0 left-0 w-full h-full z-[2] bg-[rgba(15,15,15,0.95)] backdrop-blur-md rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 transition-all duration-300">
             <motion.div 
-              className="relative z-10 w-[130px] h-[130px] mb-4 overflow-hidden rounded-full border-2 border-gray-700 group-hover:border-blue-500 transition-all duration-300 mt-2"
+              className="relative z-10 w-[130px] h-[130px] mb-5 overflow-hidden rounded-full border-2 border-gray-800 group-hover:border-indigo-500 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
             >
               <Image
@@ -104,28 +83,45 @@ function TeamCard({ team, index, blobColor }: { team: { name: string, logo: stri
               />
             </motion.div>
             
-            <motion.h4 
-              className="text-xl font-bold mb-1 bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text relative z-10"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-            >
-              {team.name}
-            </motion.h4>
+            {/* Clean name styling */}
+            <div className="space-y-1 text-center">
+              <motion.h4 
+                className="text-xl font-bold relative z-10 text-white"
+                initial={{ opacity: 0.9 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                {team.name}
+              </motion.h4>
+              
+              <motion.div 
+                className="h-[2px] w-16 mx-auto bg-indigo-600 rounded-full my-2"
+                initial={{ width: "30%" }}
+                animate={{ width: isHovered ? "60%" : "30%" }}
+                transition={{ duration: 0.5 }}
+              />
+              
+              <motion.p 
+                className="text-gray-300 text-sm font-medium relative z-10"
+                initial={{ opacity: 0.8 }}
+                whileHover={{ opacity: 1 }}
+              >
+                {team.role}
+              </motion.p>
+            </div>
             
-            <motion.p 
-              className="text-white text-sm opacity-80 group-hover:opacity-100 transition-all duration-300 relative z-10 mb-2"
-              initial={{ opacity: 0.8 }}
-              whileHover={{ opacity: 1 }}
-            >
-              {team.role}
-            </motion.p>
-            
-            <motion.div 
-              className="h-[2px] bg-gradient-to-r from-blue-400 to-purple-600 mt-2 rounded-full"
-              initial={{ width: 0 }}
-              whileHover={{ width: "80%" }}
-              transition={{ duration: 0.5 }}
-            />
+            {/* Subtle accent lighting on edges only */}
+            {isHovered && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.15 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0 rounded-xl"
+                style={{
+                  boxShadow: "inset 0 0 10px rgba(79, 70, 229, 0.4)",
+                }}
+              />
+            )}
           </div>
         </motion.div>
       </div>
