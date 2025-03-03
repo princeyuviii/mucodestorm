@@ -11,12 +11,12 @@ export default function SpandanHighlights() {
     { 
       title: "Spandan 2023 Celebrity Night", 
       videoId: "QdGTbs6F2rs?si=PN_Ev94x8VD-ar_-", 
-      description: "Highlights from Celebrity Night 2K23"
+      description: "Highlights from Celebrity Night 2K23."
     },
     { 
-      title: "Spandan Awards Ceremony", 
-      videoId: "VIDEO_ID_3", 
-      description: "Celebrating achievements at Spandan"
+      title: "Spandan 2023 Launch", 
+      videoId: "vGA3ZFNp4sk?si=6e4H05n13UnQoCGP", 
+      description: "Spandan 2K23 Inauguration Day."
     }
   ];
 
