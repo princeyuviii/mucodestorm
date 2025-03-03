@@ -4,14 +4,14 @@ import { useState } from "react";
 export default function SpandanHighlights() {
   const highlights = [
     { 
-      title: "Spandan 2023 Opening Ceremony", 
+      title: "Spandan 2024 Celebrity Night", 
       videoId: "czVEFWCmMIg?si=VjjTV1YBk8kQ4aZL", 
-      description: "Highlights from the grand opening ceremony"
+      description: "Highlights from Celebrity Night 2K24."
     },
     { 
-      title: "Cultural Night Performance", 
-      videoId: "VIDEO_ID_2", 
-      description: "Best moments from our cultural performances"
+      title: "Spandan 2023 Celebrity Night", 
+      videoId: "QdGTbs6F2rs?si=PN_Ev94x8VD-ar_-", 
+      description: "Highlights from Celebrity Night 2K23"
     },
     { 
       title: "Spandan Awards Ceremony", 
