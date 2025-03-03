@@ -106,9 +106,9 @@ export default function Footer() {
         <div className="mt-4 text-center text-sm text-gray-400">
           Made with ❤️ by{" "}
           <LinkPreview url="https://github.com/iamkavy47" className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
-{/*             Kavy Porwal.
+            Kavy Porwal.
           </LinkPreview>{" "}
-            <LinkPreview url="https://github.com/tanveer188" className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text hover:underline">
+{/*             <LinkPreview url="https://github.com/tanveer188" className="bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text hover:underline">
             <span className=" text-gray-400">Minor Style Adjustments:</span> Tanveer Hussain
             </LinkPreview>{" "} */}
         </div>
