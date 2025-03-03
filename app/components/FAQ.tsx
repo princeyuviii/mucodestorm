@@ -32,12 +32,29 @@ export default function FAQ() {
 },
 
     {
-      question: "Who can participate?",
-      answer: "MU CodeStorm is open to all students currently enrolled in any recognized educational institution.",
+      question: "Rules and Regulations",
+      answer: (
+        <>
+          <p><strong>Team Formation:</strong></p>
+          <ul className="list-disc pl-5">
+            <li>Participants must be from the same institution.</li>
+            <li>Teams can consist of members from different branches within the same college.</li>
+            <li>Each team must have 3 to 4 members, including a team leader.</li>
+          </ul>
+          <p><strong>Mode of Event:</strong></p>
+          <ul className="list-disc pl-5">
+            <li>The first stage (domain selection & presentation submission) will be online (non-elimination round).</li>
+            <li>The finale will be conducted in person at Mandsaur University.</li>
+          </ul>
+          <p><strong>Travel & Accommodation:</strong></p>
+          <ul className="list-disc pl-5">
+            <li>Participants must bear their own travel expenses.</li>
+            <li>Free accommodation is available from March 20 (5 PM) to March 23 (11 AM) for outstation participants.</li>
+            <li>Food will be provided free of cost on March 21 & 22.</li>
+          </ul>
+        </>
+      ),
     },
-    {
-      question: "What's the team size?",
-      answer: """1. Team Formation:Participants must be from the same institution.o Teams can consist of members from different branches within the same college.o Each team must have 2 to 4 members, including a team leader.o 2. Mode of Event:o The first stage (domain selection & presentation submission) will be online (nonelimination round).o The finale will be conducted in-person at Mandsaur University.3. Travel & Accommodation:o o o Participants must bear their own travel expenses.Free accommodation is available from March 20 (5 PM) to March 23 (11 AM)for outstation participants.Food will be provided free of cost on March 21 & 22."""
     {
       question: "Is there a registration fee?",
       answer: "Yes, there is a very minimal registration fee of ₹1550 per team.",
