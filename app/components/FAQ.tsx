@@ -37,8 +37,7 @@ export default function FAQ() {
     },
     {
       question: "What's the team size?",
-      answer: "Teams can consist of 3 to 4 members. Solo participation is not allowed.",
-    },
+      answer: """1. Team Formation:Participants must be from the same institution.o Teams can consist of members from different branches within the same college.o Each team must have 2 to 4 members, including a team leader.o 2. Mode of Event:o The first stage (domain selection & presentation submission) will be online (nonelimination round).o The finale will be conducted in-person at Mandsaur University.3. Travel & Accommodation:o o o Participants must bear their own travel expenses.Free accommodation is available from March 20 (5 PM) to March 23 (11 AM)for outstation participants.Food will be provided free of cost on March 21 & 22."""
     {
       question: "Is there a registration fee?",
       answer: "Yes, there is a very minimal registration fee of ₹1550 per team.",
