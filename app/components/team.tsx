@@ -11,10 +11,7 @@ export default function Teams() {
   ];
 
   const blobColors = [
-    "#4f46e5", // indigo
-    "#8b5cf6", // violet
-    "#3b82f6", // blue
-    "#06b6d4", // cyan
+    "#FFFFFF"
   ];
 
   return (
