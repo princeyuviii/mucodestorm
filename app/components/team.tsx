@@ -57,7 +57,7 @@ function TeamCard({ team, index, blobColor }: { team: { name: string, logo: stri
       <div className="relative w-[250px] h-[320px] rounded-[14px] overflow-hidden group">
         {/* Animated border */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-[14px]"
+          className="absolute inset-0 bg-white rounded-[14px]"
           animate={{
             boxShadow: isHovered 
               ? "0 0 25px rgba(139, 92, 246, 0.9)" 
