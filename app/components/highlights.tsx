@@ -21,7 +21,7 @@ export default function SpandanHighlights() {
   ];
 
   return (
-    <section id="highlights" className="py-20 bg-gray-950">
+    <section id="highlights" className="py-20 bg-transparent">
       <div className="container mx-auto px-4 text-center">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
