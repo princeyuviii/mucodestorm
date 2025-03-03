@@ -5,17 +5,17 @@ export default function SpandanHighlights() {
   const highlights = [
     { 
       title: "Spandan 2023 Opening Ceremony", 
-      videoId: "VIDEO_ID_1", // Replace with your actual YouTube video ID
+      videoId: "czVEFWCmMIg?si=VjjTV1YBk8kQ4aZL", 
       description: "Highlights from the grand opening ceremony"
     },
     { 
       title: "Cultural Night Performance", 
-      videoId: "VIDEO_ID_2", // Replace with your actual YouTube video ID
+      videoId: "VIDEO_ID_2", 
       description: "Best moments from our cultural performances"
     },
     { 
       title: "Spandan Awards Ceremony", 
-      videoId: "VIDEO_ID_3", // Replace with your actual YouTube video ID
+      videoId: "VIDEO_ID_3", 
       description: "Celebrating achievements at Spandan"
     }
   ];
