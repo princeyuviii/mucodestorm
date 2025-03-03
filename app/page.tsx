@@ -169,12 +169,15 @@ export default function Home() {
           <Themes />
         </ScrollAnimation>
         <ScrollAnimation delay={0.4}>
-          <Teams />
+          <SpandanHighlights />
         </ScrollAnimation>
         <ScrollAnimation delay={0.3}>
-          <CB />
+          <Teams />
         </ScrollAnimation>
         <ScrollAnimation delay={0.4}>
+          <CB />
+        </ScrollAnimation>
+        <ScrollAnimation delay={0.3}>
           <FAQ />
         </ScrollAnimation>
       </main>
