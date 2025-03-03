@@ -48,40 +48,21 @@ export default function SpandanHighlights() {
 }
 
 function HighlightCard({ highlight, index }: { highlight: { title: string, videoId: string, description: string }, index: number }) {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: index * 0.15 }}
       className="flex justify-center"
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="relative w-full h-[320px] rounded-xl overflow-hidden group">
-        {/* Clean border with subtle animation - same as Team component */}
-        <motion.div 
-          className="absolute inset-0 rounded-xl bg-gray-900"
-          animate={{
-            boxShadow: isHovered 
-              ? "0 0 20px rgba(79, 70, 229, 0.4)" 
-              : "0 0 10px rgba(30, 30, 30, 0.4)",
-          }}
-          style={{
-            border: isHovered ? "1px solid rgba(99, 102, 241, 0.4)" : "1px solid rgba(75, 85, 99, 0.2)",
-          }}
-          transition={{ duration: 0.3 }}
-        />
+      <div className="relative w-full h-[320px] rounded-xl overflow-hidden">
+        {/* Simplified border with minimal style */}
+        <div className="absolute inset-0 rounded-xl bg-gray-900 border border-gray-800" />
 
-        <motion.div 
-          className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center shadow-[20px_20px_60px_#1a1a1a,_-20px_-20px_60px_#2c2c2c]"
-          whileHover={{ scale: 0.98 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="absolute top-[5px] left-[5px] w-[calc(100%-10px)] h-[calc(100%-10px)] z-[2] bg-[rgba(15,15,15,0.95)] backdrop-blur-md rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 transition-all duration-300">
-            {/* YouTube Embed */}
-            <div className="w-full h-48 mb-4 rounded-lg overflow-hidden border-2 border-gray-800 group-hover:border-indigo-500 transition-all duration-300">
+        <div className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center">
+          <div className="absolute top-0 left-0 w-full h-full z-[2] bg-[rgba(15,15,15,0.95)] backdrop-blur-sm rounded-xl overflow-hidden flex flex-col items-center justify-center p-4">
+            {/* YouTube Embed with smaller bezel */}
+            <div className="w-full h-48 mb-4 rounded-lg overflow-hidden border border-gray-800">
               <iframe
                 width="100%"
                 height="100%"
@@ -90,51 +71,24 @@ function HighlightCard({ highlight, index }: { highlight: { title: string, video
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full object-cover pointer-events-auto" // Ensure iframe can receive pointer events
+                className="w-full h-full object-cover"
               ></iframe>
             </div>
 
             {/* Title and description styling */}
             <div className="space-y-1 text-center">
-              <motion.h4 
-                className="text-xl font-bold relative z-10 text-white"
-                initial={{ opacity: 0.9 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <h4 className="text-xl font-bold relative z-10 text-white">
                 {highlight.title}
-              </motion.h4>
+              </h4>
 
-              <motion.div 
-                className="h-[2px] w-16 mx-auto bg-indigo-600 rounded-full my-2"
-                initial={{ width: "30%" }}
-                animate={{ width: isHovered ? "60%" : "30%" }}
-                transition={{ duration: 0.5 }}
-              />
+              <div className="h-[2px] w-16 mx-auto bg-indigo-600 rounded-full my-2" />
 
-              <motion.p 
-                className="text-gray-300 text-sm font-medium relative z-10"
-                initial={{ opacity: 0.8 }}
-                whileHover={{ opacity: 1 }}
-              >
+              <p className="text-gray-300 text-sm font-medium relative z-10">
                 {highlight.description}
-              </motion.p>
+              </p>
             </div>
-
-            {/* Subtle accent lighting on edges only */}
-            {isHovered && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 0.15 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 rounded-xl"
-                style={{
-                  boxShadow: "inset 0 0 10px rgba(79, 70, 229, 0.4)",
-                }}
-              />
-            )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );
