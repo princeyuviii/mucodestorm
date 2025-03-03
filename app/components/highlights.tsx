@@ -49,7 +49,7 @@ export default function SpandanHighlights() {
 
 function HighlightCard({ highlight, index }: { highlight: { title: string, videoId: string, description: string }, index: number }) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ function HighlightCard({ highlight, index }: { highlight: { title: string, video
           }}
           transition={{ duration: 0.3 }}
         />
-        
+
         <motion.div 
           className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center shadow-[20px_20px_60px_#1a1a1a,_-20px_-20px_60px_#2c2c2c]"
           whileHover={{ scale: 0.98 }}
@@ -90,10 +90,10 @@ function HighlightCard({ highlight, index }: { highlight: { title: string, video
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-auto" // Ensure iframe can receive pointer events
               ></iframe>
             </div>
-            
+
             {/* Title and description styling */}
             <div className="space-y-1 text-center">
               <motion.h4 
@@ -104,14 +104,14 @@ function HighlightCard({ highlight, index }: { highlight: { title: string, video
               >
                 {highlight.title}
               </motion.h4>
-              
+
               <motion.div 
                 className="h-[2px] w-16 mx-auto bg-indigo-600 rounded-full my-2"
                 initial={{ width: "30%" }}
                 animate={{ width: isHovered ? "60%" : "30%" }}
                 transition={{ duration: 0.5 }}
               />
-              
+
               <motion.p 
                 className="text-gray-300 text-sm font-medium relative z-10"
                 initial={{ opacity: 0.8 }}
@@ -120,7 +120,7 @@ function HighlightCard({ highlight, index }: { highlight: { title: string, video
                 {highlight.description}
               </motion.p>
             </div>
-            
+
             {/* Subtle accent lighting on edges only */}
             {isHovered && (
               <motion.div
