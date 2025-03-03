@@ -14,7 +14,7 @@ import CB from "./components/cb"
 import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
 import { SparklesCore } from "./components/ui/sparkles"
-import spandanHighlites from "./components/highlites"
+import SpandanHighlights from "./components/highlights"
 // import { CardSpotlightDemo } from "./components/Prizes"
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
