@@ -49,8 +49,8 @@ function TeamCard({ team, index }: { team: { name: string, logo: string, role: s
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <div className="relative w-full max-w-[250px] h-[320px] rounded-xl overflow-hidden group">
-        {/* Clean border with subtle animation */}
+      <div className="relative w-[250px] h-[320px] rounded-xl overflow-hidden group">
+        {/* Clean border with subtle animation - same as CB component */}
         <motion.div 
           className="absolute inset-0 rounded-xl bg-gray-900"
           animate={{
@@ -65,13 +65,13 @@ function TeamCard({ team, index }: { team: { name: string, logo: string, role: s
         />
         
         <motion.div 
-          className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center"
+          className="relative w-full h-full rounded-xl z-10 overflow-hidden flex flex-col items-center justify-center shadow-[20px_20px_60px_#1a1a1a,_-20px_-20px_60px_#2c2c2c]"
           whileHover={{ scale: 0.98 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="absolute top-0 left-0 w-full h-full z-[2] bg-[rgba(15,15,15,0.95)] backdrop-blur-md rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 transition-all duration-300">
+          <div className="absolute top-[5px] left-[5px] w-[calc(100%-10px)] h-[calc(100%-10px)] z-[2] bg-[rgba(15,15,15,0.95)] backdrop-blur-md rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 transition-all duration-300">
             <motion.div 
-              className="relative z-10 w-[130px] h-[130px] mb-5 overflow-hidden rounded-full border-2 border-gray-800 group-hover:border-indigo-500 transition-all duration-300"
+              className="relative z-10 w-[130px] h-[130px] mb-4 overflow-hidden rounded-full border-2 border-gray-800 group-hover:border-indigo-500 transition-all duration-300 mt-2"
               whileHover={{ scale: 1.05 }}
             >
               <Image
