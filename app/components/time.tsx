@@ -30,7 +30,7 @@ export function TimelineDemo() {
           </div>
         </div>
       ),
-    },
+    },{
           title: "March 21, 2025",
       content: (
         <div>
