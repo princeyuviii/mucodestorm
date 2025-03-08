@@ -37,7 +37,6 @@ export default function FAQ() {
         <>
           <p><strong>Team Formation:</strong></p>
           <ul className="list-disc pl-5">
-            <li>Participants must be from the same institution.</li>
             <li>Teams can consist of members from different branches within the same college.</li>
             <li>Each team must have 3 to 4 members, including a team leader.</li>
           </ul>
