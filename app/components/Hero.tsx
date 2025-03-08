@@ -39,10 +39,6 @@ export default function Hero() {
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
     </div>
-        <TextGenerateEffect
-          words="Innovate • Collaborate • Create"
-          className="text-xl md:text-2xl mb-8 text-gray-300"
-        />
         <p className="text-lg md:text-xl mb-8 text-indigo-300">
           March 21-22, 2025 • 36 Hours • Mandsaur University Campus
         </p>
