@@ -22,24 +22,23 @@ export function TimelineDemo() {
       content: (
         <div>
           <h2 className="text-xl">
-            Cultural Night
-          </h2><br />
-          <div className="grid grid-cols-2 gap-4">
-            <p>🕙 06:00 PM - 10:30 PM </p><br />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "March 21, 2025",
-      content: (
-        <div>
-          <h2 className="text-xl">
             First Day of CodeStorm
           </h2><br />
           <div className="grid grid-cols-2 gap-4">
             <p>🕙 10:00 AM - PPT & Training Session</p><br />
             <p>🕝 2:30 - 3:00 PM - Problem Statement Release</p>
+          </div>
+        </div>
+      ),
+    },
+          title: "March 21, 2025",
+      content: (
+        <div>
+          <h2 className="text-xl">
+            Cultural Night
+          </h2><br />
+          <div className="grid grid-cols-2 gap-4">
+            <p>🕙 06:00 PM - 10:30 PM </p><br />
           </div>
         </div>
       ),
